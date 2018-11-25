@@ -33,7 +33,7 @@ travis_end "configure"
 # Build
 travis_start "build"
 msg "Build..."
-make -j $(nproc)
+make -j $(nproc) VERBOSE=1
 make install
 dbus-run-session -- \
     xvfb-run -a -s "-screen 0 800x600x24" \
