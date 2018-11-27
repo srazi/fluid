@@ -13,6 +13,7 @@ dnf install -y \
 rpm -qf /usr/share/doc/qt5/global/qt-cpp-defines.qdocconf || true
 dnf install -y qt5-qtbase || true
 rpm -qf /usr/share/doc/qt5/global/qt-cpp-defines.qdocconf || true
+rpm -ql qt5-qtbase | grep doc
 travis_end "install_packages"
 
 # Install artifacts
