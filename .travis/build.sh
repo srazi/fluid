@@ -10,9 +10,9 @@ msg "Install packages..."
 dnf install -y \
     desktop-file-utils \
     libappstream-glib
-rpm -qf /usr/share/doc/qt5/global/qt-cpp-defines.qdocconf
-dnf install -y qt5-qtbase
-rpm -qf /usr/share/doc/qt5/global/qt-cpp-defines.qdocconf
+rpm -qf /usr/share/doc/qt5/global/qt-cpp-defines.qdocconf || true
+dnf install -y qt5-qtbase || true
+rpm -qf /usr/share/doc/qt5/global/qt-cpp-defines.qdocconf || true
 travis_end "install_packages"
 
 # Install artifacts
